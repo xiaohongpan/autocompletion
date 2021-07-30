@@ -1,0 +1,17 @@
+The programs reads src/main/resources/test.txt file and build compact Trie.
+
+1. The program reads the test file, build a HashMap countMap with key=word, value=number of "word"
+2. Then change the HashMap to TreeMap with short string length as high priority, same string length, use alphabetic order
+3. Add the sorted words from TreeMap to compact trie.
+
+You can replace test.txt with your test file
+
+Then you can use rest API to do the search. The maximum auto-completion words are 10. For example
+curl --location --request GET 'http://localhost:8080/api/search?word=b'
+
+The result is
+[
+    "bank",
+    "bat",
+    "ban"
+]
